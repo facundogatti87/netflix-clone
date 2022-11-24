@@ -86,7 +86,7 @@ const Container = styled.div`
       height: 85vh;
       .form {
         padding: 2rem;
-        backgournd-color: #000000b0;
+        background-color: #000000b0;
         width: 25vw;
         gap: 2rem;
         color: white;
