@@ -69,7 +69,7 @@ export default function Signup() {
               />
             )}
             {!showPassword && (
-              <button onClick={() => setShowPassword(true)}>Get Started</button>
+              <button onClick={() => setShowPassword(true)}>Empezar!</button>
             )}
           </div>
           <button onClick={handleSignIn}>Registrarse</button>
