@@ -54,12 +54,11 @@ export const fetchMovies = createAsyncThunk(
     const {
       netflix: { genres },
     } = thunkApi.getState();
-    const data = getRawData(
+    return getRawData(
       `${TMBD_BASE_URL}/trending/${type}/week?api_key=${API_KEY}`,
       genres,
       true
     );
-    console.log(data);
   }
 );
 
@@ -70,6 +69,9 @@ const NetflixSlice = createSlice({
     builder.addCase(getGenres.fulfilled, (state, action) => {
       state.genres = action.payload;
       state.genresLoaded = true;
+    });
+    builder.addCase(fetchMovies.fulfilled, (state, action) => {
+      state.movies = action.payload;
     });
   },
 });
